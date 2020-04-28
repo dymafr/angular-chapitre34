@@ -1,0 +1,6 @@
+<h1>App ok</h1>
+<h1 *ngIf="isBrowser">ONLY ON BROWSER</h1>
+<h2 *ngFor="let user of users">{{ user.email }}</h2>
+<button [routerLink]="['/']">Home</button>
+<button [routerLink]="['/profile']">Profile</button>
+<router-outlet></router-outlet>

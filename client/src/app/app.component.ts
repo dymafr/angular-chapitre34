@@ -9,12 +9,12 @@ import { isPlatformServer, isPlatformBrowser } from '@angular/common';
 })
 export class AppComponent {
   title = 'client';
-  public users: any[];
+  public users: any[] = [];
   public isBrowser = isPlatformBrowser(this.plateformId);
 
   constructor(
     public httpClient: HttpClient,
-    @Inject(PLATFORM_ID) private plateformId
+    @Inject(PLATFORM_ID) private plateformId: Object
   ) {
     this.httpClient
       .get('https://randomuser.me/api/?results=100')

@@ -15,15 +15,15 @@ import { HomeComponent } from './home/home.component';
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     TransferHttpCacheModule,
     RouterModule.forRoot([
-    {
+      {
         path: 'profile',
         component: ProfileComponent,
-    },
-    {
+      },
+      {
         path: '',
         component: HomeComponent,
-    },
-], { relativeLinkResolution: 'legacy' }),
+      },
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent],
